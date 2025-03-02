@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Countdown.Core\Countdown.Core.csproj" />
+    <ProjectReference Include="..\Countdown.Util\Countdown.Util.csproj" />
+  </ItemGroup>
+
+    <Target Name="CopyData" AfterTargets="Build">
+        <ItemGroup>
+            <DataFiles Include="..\..\data\**" />
+        </ItemGroup>
+        <Copy SourceFiles="@(DataFiles)" DestinationFolder="$(OutDir)data" />
+    </Target>
+
+</Project>

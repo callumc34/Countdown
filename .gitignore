@@ -1,0 +1,13 @@
+# Visual Studio
+.vs
+packages/
+
+# Build
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# Test
+[Tt]est[Rr]esult*/
